@@ -23,8 +23,9 @@ def extract_data() -> int:
 
     url = f"https://api.cricapi.com/v1/currentMatches?apikey={api_key}&offset=0"
     
-    # Ensure bronze directory exists
-    bronze_dir = Path("data/bronze")
+    # Ensure bronze directory exists using absolute pathing for EC2 compatibility
+    project_root = Path(__file__).resolve().parent.parent
+    bronze_dir = project_root / "data" / "bronze"
     bronze_dir.mkdir(parents=True, exist_ok=True)
     
     try:

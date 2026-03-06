@@ -25,8 +25,9 @@ def transform_data() -> int:
     the Silver layer.
     Returns the number of rows transformed.
     """
-    bronze_dir = Path("data/bronze")
-    silver_dir = Path("data/silver")
+    project_root = Path(__file__).resolve().parent.parent
+    bronze_dir = project_root / "data" / "bronze"
+    silver_dir = project_root / "data" / "silver"
     
     # Ensure silver directory exists
     silver_dir.mkdir(parents=True, exist_ok=True)
