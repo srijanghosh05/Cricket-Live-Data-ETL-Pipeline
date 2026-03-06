@@ -21,9 +21,9 @@ def setup_logging():
         logger.addHandler(file_handler)
         
         # Console handler
-        console_handler = logging.StreamHandler(sys.stdout)
-        console_handler.setFormatter(formatter)
-        logger.addHandler(console_handler)
+        # console_handler = logging.StreamHandler(sys.stdout)
+        # console_handler.setFormatter(formatter)
+        # logger.addHandler(console_handler)
 
 def main():
     """
