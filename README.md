@@ -50,7 +50,7 @@ python main.py
 
 ### AWS EC2 Deployment (Cron)
 This pipeline uses absolute path resolution `Path(__file__).resolve().parent.parent` to ensure it runs flawlessly via Linux `cron` on an EC2 instance.
-Example cron job (runs every 15 minutes):
+Example cron job (runs every 30 minutes):
 ```bash
 */30 * * * * cd /home/ubuntu/Cricket-Live-Data-ETL-Pipeline && /home/ubuntu/Cricket-Live-Data-ETL-Pipeline/venv/bin/python main.py >> pipeline.log 2>&1
 ```
