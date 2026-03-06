@@ -1,2 +1,0 @@
-Database uid-postgres 
-Pass- $rijaN2005
